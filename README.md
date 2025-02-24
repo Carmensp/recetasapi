@@ -14,3 +14,7 @@ En este caso, al ser necesario un carousel para el diseño, me ha parecido una b
 
 He elegido dividir el proyecto en los componentes PrincipalComponent, FilterComponent y RecetasComponent.
 Esta división permite tener un diseño de código mucho más limpio además de ser una buena práctica al poder reutilizar esos componentes más adelante en otras vistas.
+
+Todos los componentes están dentro de una carpeta components donde se irán metiento todos los componentes que se vayan haciendo. 
+
+Además, cada componente lleva su archivo css.
