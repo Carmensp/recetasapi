@@ -3,7 +3,7 @@ import "./PrincipalComponent.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import { FilterComponent } from "../filtro/FilterComponent";
-import { CarrouselComponent } from "../carrousel/CarrouselComponent";
+import { CarouselComponent } from "../carousel/CarouselComponent";
 
 export function PrincipalComponent() {
   const [categories, setCategories] = useState([]);
@@ -37,7 +37,7 @@ export function PrincipalComponent() {
     }
   };
 
-  const generateEmailBody = () => {
+  const sendEmail = () => {
     if (meals.length > 0) {
       const meal = meals[0];
       return `Mira esta receta: ${meal.strMeal}\n\nImagen: ${meal.strMealThumb}\n\nFuente: https://www.themealdb.com/meal/${meal.idMeal}`;
@@ -45,7 +45,7 @@ export function PrincipalComponent() {
     return '';
   };
 
-  const emailBody = generateEmailBody();
+  const email = sendEmail();
 
   return (
     <div className="container">
@@ -54,12 +54,12 @@ export function PrincipalComponent() {
         selectedCategory={selectedCategory}  
         setSelectedCategory={setSelectedCategory}  
       />
-      <CarrouselComponent meals={meals} />
+      <CarouselComponent meals={meals} />
 
       <div className="buttons">
         <button className="button" onClick={handleRandomCategory}>Random</button>
         <a 
-          href={`mailto:?subject=Receta%20del%20día&body=${encodeURIComponent(emailBody)}`} 
+          href={`mailto:?subject=Receta%20del%20día&body=${encodeURIComponent(email)}`} 
           className="button"
         >
           Enviar receta

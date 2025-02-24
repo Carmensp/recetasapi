@@ -8,7 +8,7 @@ utilizando esta tecnología.
 
 Para este proyecto he instalado y utilizado la biblioteca de Swiper.
 Esta biblioteca permite crear carouseles de forma más sencilla y personalizable.
-En este caso, al ser necesario un carrousel para el diseño, me ha parecido una buena implementación.
+En este caso, al ser necesario un carousel para el diseño, me ha parecido una buena implementación.
 
 ## COMPONENTES
 
